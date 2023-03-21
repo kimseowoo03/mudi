@@ -3,10 +3,12 @@ function Sidebar() {
   return (
     <div className={style.container}>
       <div className={style.sidebar}>
-        <a className={style.logo}></a>
+        <a href="{()=>false}" className={style.logo}>
+          해결
+        </a>
         <ul>
           <li>
-            <a>
+            <a href="{()=>false}">
               <i>icon</i>
               <p>홈</p>
             </a>
