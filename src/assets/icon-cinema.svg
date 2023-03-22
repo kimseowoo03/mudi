@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g data-name="Icon feather-film">
+        <path data-name="패스 695" d="M4.962 3h14.076A1.962 1.962 0 0 1 21 4.962v14.076A1.962 1.962 0 0 1 19.038 21H4.962A1.962 1.962 0 0 1 3 19.038V4.962A1.962 1.962 0 0 1 4.962 3z" transform="translate(-2 -2)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        <path data-name="패스 696" d="M10.5 3v18" transform="translate(-5 -2)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        <path data-name="패스 697" d="M25.5 3v18" transform="translate(-11 -2)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        <path data-name="패스 698" d="M3 18h18" transform="translate(-2 -8)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        <path data-name="패스 699" d="M3 10.5h4.5" transform="translate(-2 -5)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        <path data-name="패스 700" d="M3 25.5h4.5" transform="translate(-2 -11)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        <path data-name="패스 701" d="M25.5 25.5H30" transform="translate(-11 -11)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        <path data-name="패스 702" d="M25.5 10.5H30" transform="translate(-11 -5)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+    </g>
+</svg>
