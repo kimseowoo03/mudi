@@ -5,7 +5,7 @@ import magazine_icon from "../assets/icon-Magazine.svg";
 import cinema_icon from "../assets/icon-cinema.svg";
 import wishlist_icon from "../assets/icon-wishlist.svg";
 
-function Sidebar() {
+const Sidebar = () => {
   return (
     <div className={style.container}>
       <div className={style.sidebar}>
