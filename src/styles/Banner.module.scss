@@ -1,0 +1,172 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.banner {
+  max-width: 70.375rem;
+  height: 31.25rem;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 3.4fr 1fr;
+  grid-gap: 1.313rem;
+}
+
+.slider {
+  max-width: 53.563rem;
+  height: 31.25rem;
+  position: relative;
+}
+
+.slide_show {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  counter-reset: item;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  border-radius: 0.625rem;
+}
+.slide_show .slide {
+  position: relative;
+  background-color: #f99;
+  flex: 0 0 100%;
+  counter-increment: item;
+
+  .snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+}
+.slide:nth-child(even) {
+  background-color: #99f;
+}
+.slide:before {
+  content: counter(item);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-40%,4.375rem);
+  color: #fff;
+  font-size: 2em;
+}
+
+.slide_nav {
+  position: absolute;
+  right: 0;
+  bottom: 1.25rem;
+  left: 0;
+  text-align: center;
+}
+.slide_nav .slide_btn_list .slide_btn_item {
+  display: inline-block;
+
+  .slide_btn {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.313rem solid transparent;
+    border-radius: 50%;
+  }
+}
+
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -200%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+@media (hover: hover) {
+  .snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  .slide:last-child .snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snapper {
+    animation-name: none;
+  }
+}
+
+.support {
+  height: 5.188rem;
+  background:  yellow;
+  border-radius: 0.625rem;
+}
+
+.view_rank {
+  height: 25.125rem;
+  border: 1px solid #272727;
+  background:  #1c1c1c;
+  margin-top: 0.938rem;
+  border-radius: 0.625rem;
+}
+
+@media (max-width: 67.5rem) {
+  .banner {
+    display: block;
+  }
+
+  .right_content {
+    display: none;
+  }
+}
