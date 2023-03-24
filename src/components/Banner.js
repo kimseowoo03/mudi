@@ -1,5 +1,5 @@
 import style from "../styles/Banner.module.scss";
- 
+ // 테스트 주석입니다
 const Banner = () => {
   return (
     <div className={style.banner}>
