@@ -15,7 +15,7 @@ const Banner = () => {
             <li id="slide03" className={style.slide}>
               <div className={style.snapper}></div>
             </li>
-          </ul>
+          </ul> 
           <div className={style.slide_nav}>
             <ul className={style.slide_btn_list}>
               <li className={style.slide_btn_item}>
