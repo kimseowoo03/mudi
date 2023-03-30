@@ -1,4 +1,4 @@
-*::-webkit-scrollbar {
+.slide_show::-webkit-scrollbar {
   display: none;
 }
 
@@ -7,17 +7,18 @@ li {
 }
 
 .banner {
-  max-width: 70.375rem;
-  height: 31.25rem;
+  max-width: 100%;
+  max-height: 25rem;
   margin: 2rem;
   display: grid;
   grid-template-columns: 3.4fr 1fr;
+  grid-template-rows: 1fr;
   grid-gap: 1.313rem;
 }
 
 .slider {
-  max-width: 53.563rem;
-  height: 31.25rem;
+  max-width: 100%;
+  height: 25rem;
   position: relative;
 }
 
@@ -28,18 +29,20 @@ li {
   top: 0;
   left: 0;
   display: flex;
-  counter-reset: item;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   border-radius: 0.625rem;
 }
-.slide_show .slide {
-  position: relative;
-  background-color: #f99;
-  flex: 0 0 100%;
-  counter-increment: item;
 
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+
+  img {
+    max-width: 100%;
+    height: 25rem;
+  }
   .snapper {
     position: absolute;
     top: 0;
@@ -49,18 +52,6 @@ li {
     scroll-snap-align: center;
   }
 }
-.slide:nth-child(even) {
-  background-color: #99f;
-}
-.slide:before {
-  content: counter(item);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%,-40%,4.375rem);
-  color: #fff;
-  font-size: 2em;
-}
 
 .slide_nav {
   position: absolute;
@@ -68,18 +59,19 @@ li {
   bottom: 1.25rem;
   left: 0;
   text-align: center;
-}
-.slide_nav .slide_btn_list .slide_btn_item {
-  display: inline-block;
 
-  .slide_btn {
+  .slide_btn_item {
     display: inline-block;
-    width: 0.75rem;
-    height: 0.75rem;
-    background-color: #333;
-    background-clip: content-box;
-    border: 0.313rem solid transparent;
-    border-radius: 50%;
+  
+    .slide_btn {
+      display: inline-block;
+      width: 0.75rem;
+      height: 0.75rem;
+      background-color: #333;
+      background-clip: content-box;
+      border: 0.313rem solid transparent;
+      border-radius: 50%;
+    }
   }
 }
 
@@ -135,7 +127,6 @@ li {
     animation-duration: 5s;
     animation-iteration-count: infinite;
   }
-
   .slide:last-child .snapper {
     animation-name: tostart, snap;
   }
@@ -148,13 +139,13 @@ li {
 }
 
 .support {
-  height: 5.188rem;
+  height: 5.313rem;
   background:  yellow;
   border-radius: 0.625rem;
 }
 
 .view_rank {
-  height: 25.125rem;
+  height: 18.75rem;
   border: 1px solid #272727;
   background:  #1c1c1c;
   margin-top: 0.938rem;
@@ -164,9 +155,47 @@ li {
 @media (max-width: 67.5rem) {
   .banner {
     display: block;
+    max-width: 57.188rem;
+    max-height: 21.875rem;
   }
 
   .right_content {
+    display: none;
+  }
+
+  .slider {
+    max-width: 57.188rem;
+    height: 21.875rem;
+
+    .slide {
+      img {
+        max-width: 57.188rem;
+        height: 21.875rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 24.375rem) {
+  .banner {
+    max-width: 22.375rem;
+    max-height: 27.813rem;
+    margin: 2rem 1rem;
+    display: none;
+  }
+  
+  .slider {
+    max-width: 22.375rem;
+    height: 27.813rem;
+
+    .slide {
+      img {
+        max-width: 22.375rem;
+        height: 27.813rem;
+      }
+    }
+  }
+  .slide_nav {
     display: none;
   }
 }
