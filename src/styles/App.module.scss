@@ -2,3 +2,9 @@
   display: grid;
   grid-template-columns: min-content 1fr;
 }
+
+@media (max-width: 24.375rem) {
+  .container {
+    display: block;
+  }
+}
