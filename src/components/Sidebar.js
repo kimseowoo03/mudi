@@ -15,21 +15,25 @@ const NavItemsData = [
     src: home_icon,
     alt: "home_icon",
     nav_name: "홈",
+    link_to: "/"
   },
   {
     src: magazine_icon,
     alt: "magazine_icon",
     nav_name: "매거진",
+    link_to: "/bb"
   },
   {
     src: cinema_icon,
     alt: "cinema_icon",
     nav_name: "상영회",
+    link_to: "/aa"
   },
   {
     src: wishlist_icon,
     alt: "home_icon",
     nav_name: "위시리스트",
+    link_to: "/wishlist"
   },
 ];
 
