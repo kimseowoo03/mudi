@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 
+import movie_poster from "../assets/movie_poster.jpeg";
+
+import style from "../styles/FullMovie.module.scss";
+
 const FullMovie = () => {
   const [moviesData, setMovieData] = useState([]);
 
@@ -20,16 +24,20 @@ const FullMovie = () => {
 },[]);
 
   return (
-    <div>
+    <div className={style.container}>
       <h2>전체영화</h2>
-      <div>
+      <div className={style.full_movie_contents}>
         {moviesData.map((movie)=> {
           return (
-            <div key={movie.id}>
-              {/**이미지 div추가해주시면 됩니다. */}
-              <p>{movie.title}</p>
-              <span>{movie.comeOut}-{movie.director} 감독</span>
+            <div key={movie.id} className={style.full_movie_content}>
+              <img src={movie_poster} alt="movie_poster_image" />
+              <div className={style.movie_info}>
+                <div className={style.info_text}>
+                  <p>{movie.title}</p>
+                  <span>{movie.comeOut}-{movie.director} 감독</span>
+                </div>
               </div>
+            </div>
           )
         })}
       </div>

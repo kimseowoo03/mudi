@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 
+import movie_spoiler from "../assets/movie_spoiler.jpg";
+
+import style from "../styles/Aspoiler.module.scss";
+
 const Aspoiler = () => {
   const [moviesData, setMovieData] = useState([]);
 
@@ -19,15 +23,17 @@ const Aspoiler = () => {
   }, []);
 
   return (
-    <div>
+    <div className={style.container}>
       <h2>스포한장</h2>
-      <div>
+      <div className={style.spoiler_contents}>
         {moviesData.map((movie) => {
           return (
-            <div key={movie.id}>
-              {/**img 임시로 넣어주시면 됩니다. */}
-              <p>{movie.oneSentenceSpoiler}</p>
-              <p>{movie.director}</p>
+            <div key={movie.id} className={style.spoiler_content}>
+              <img src={movie_spoiler} alt="movie_spoiler_image" />
+              <div className={style.spoiler_text}>
+                <p>{movie.oneSentenceSpoiler}</p>
+                <p>{movie.director}</p>
+              </div>
             </div>
           );
         })}
