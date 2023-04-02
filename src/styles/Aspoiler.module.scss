@@ -20,7 +20,7 @@
 
 .spoiler_content {
   position: relative;
-  flex: 0 1 22.5rem;
+  flex: 0 0 22.5rem;
 
   img {
     width: 100%;
@@ -42,6 +42,9 @@
     }
   }
 }
+.spoiler_content:last-child {
+  margin-right: 2rem;
+}
 
 @media (max-width: 67.5rem) {
   .spoiler_content {
@@ -49,15 +52,11 @@
       max-height: 15.313rem;
     }
   }
-  .spoiler_content:last-child {
-    margin-right: 2rem;
-  }
 }
 
 @media (max-width: 24.375rem) {
   .container {
     margin-left: 1rem;
-    display: none;
   }
 
   .spoiler_contents::-webkit-scrollbar {
