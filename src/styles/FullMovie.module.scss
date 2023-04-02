@@ -19,7 +19,7 @@
 }
 
 .full_movie_content {
-  flex: 0 1 13.75rem;
+  flex: 0 0 13.75rem;
 
   img {
     width: 100%;
@@ -52,7 +52,7 @@
 
 @media (max-width: 67.5rem) {
   .full_movie_content {
-    flex: 0 1 11.25rem;
+    flex: 0 0 11.25rem;
 
     img {
       width: 100%;
@@ -81,7 +81,6 @@
 @media (max-width: 24.375rem) {
   .container {
     margin-left: 1rem;
-    display: none;
   }
 
   .full_movie_contents::-webkit-scrollbar {
@@ -89,7 +88,7 @@
   }
   
   .full_movie_content {
-    flex: 0 1 8.75rem;
+    flex: 0 0 8.75rem;
 
     img {
       width: 100%;
