@@ -41,7 +41,6 @@ const Sidebar = () => {
   return (
     <div className={style.container}>
       <div className={style.sidebar}>
-        <div className={style.top_bar}></div>
         <div className={style.close_btn}>
           <img src={close_icon} alt="close_icon" />
         </div>
