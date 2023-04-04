@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://kimseowoo03.github.io/mudi/static/css/main.fd7e4184.css",
-    "main.js": "https://kimseowoo03.github.io/mudi/static/js/main.d813b4de.js",
+    "main.js": "https://kimseowoo03.github.io/mudi/static/js/main.d3e4c5bb.js",
     "static/js/787.3fd2effd.chunk.js": "https://kimseowoo03.github.io/mudi/static/js/787.3fd2effd.chunk.js",
     "static/media/banner03.png": "https://kimseowoo03.github.io/mudi/static/media/banner03.ca645b71dc4fd1b836d3.png",
     "static/media/banner02.png": "https://kimseowoo03.github.io/mudi/static/media/banner02.25cca66083e556204f43.png",
@@ -17,11 +17,11 @@
     "static/media/x-icon.svg": "https://kimseowoo03.github.io/mudi/static/media/x-icon.081e08d8e2b01ab30fc5d83d66692f3f.svg",
     "static/media/icon-wishlist.svg": "https://kimseowoo03.github.io/mudi/static/media/icon-wishlist.e7f0107e282601b6a27dc114d51f96ae.svg",
     "main.fd7e4184.css.map": "https://kimseowoo03.github.io/mudi/static/css/main.fd7e4184.css.map",
-    "main.d813b4de.js.map": "https://kimseowoo03.github.io/mudi/static/js/main.d813b4de.js.map",
+    "main.d3e4c5bb.js.map": "https://kimseowoo03.github.io/mudi/static/js/main.d3e4c5bb.js.map",
     "787.3fd2effd.chunk.js.map": "https://kimseowoo03.github.io/mudi/static/js/787.3fd2effd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd7e4184.css",
-    "static/js/main.d813b4de.js"
+    "static/js/main.d3e4c5bb.js"
   ]
 }
