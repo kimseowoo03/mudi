@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/mudi/static/css/main.56aaa5be.css",
-    "main.js": "/mudi/static/js/main.d6b5e759.js",
-    "static/js/787.3fd2effd.chunk.js": "/mudi/static/js/787.3fd2effd.chunk.js",
-    "static/media/banner03.png": "/mudi/static/media/banner03.ca645b71dc4fd1b836d3.png",
-    "static/media/banner02.png": "/mudi/static/media/banner02.25cca66083e556204f43.png",
-    "static/media/movie_poster.jpeg": "/mudi/static/media/movie_poster.c2b7f5b28d4542da2610.jpeg",
-    "static/media/banner01.png": "/mudi/static/media/banner01.c0e2d932958342921781.png",
-    "static/media/movie_spoiler.jpg": "/mudi/static/media/movie_spoiler.88b758503c46b737ba72.jpg",
-    "static/media/user_profile.jpg": "/mudi/static/media/user_profile.00bb5cf66ea4600ab529.jpg",
-    "static/media/icon-cinema.svg": "/mudi/static/media/icon-cinema.9ee29c5d14d6c86529c2193ac2aa44f9.svg",
-    "index.html": "/mudi/index.html",
-    "static/media/icon-menu.svg": "/mudi/static/media/icon-menu.7c5c062ada8cd11aefe3c43dcfea1ddc.svg",
-    "static/media/icon-Home.svg": "/mudi/static/media/icon-Home.c2b66fa0d009a802fcc501b05c9772fe.svg",
-    "static/media/icon-Magazine.svg": "/mudi/static/media/icon-Magazine.3e16105b195e17cafe4e9f9ccf1d1d98.svg",
-    "static/media/x-icon.svg": "/mudi/static/media/x-icon.081e08d8e2b01ab30fc5d83d66692f3f.svg",
-    "static/media/icon-wishlist.svg": "/mudi/static/media/icon-wishlist.e7f0107e282601b6a27dc114d51f96ae.svg",
-    "main.56aaa5be.css.map": "/mudi/static/css/main.56aaa5be.css.map",
-    "main.d6b5e759.js.map": "/mudi/static/js/main.d6b5e759.js.map",
-    "787.3fd2effd.chunk.js.map": "/mudi/static/js/787.3fd2effd.chunk.js.map"
+    "main.css": "https://kimseowoo03.github.io/mudi/static/css/main.fd7e4184.css",
+    "main.js": "https://kimseowoo03.github.io/mudi/static/js/main.d813b4de.js",
+    "static/js/787.3fd2effd.chunk.js": "https://kimseowoo03.github.io/mudi/static/js/787.3fd2effd.chunk.js",
+    "static/media/banner03.png": "https://kimseowoo03.github.io/mudi/static/media/banner03.ca645b71dc4fd1b836d3.png",
+    "static/media/banner02.png": "https://kimseowoo03.github.io/mudi/static/media/banner02.25cca66083e556204f43.png",
+    "static/media/movie_poster.jpeg": "https://kimseowoo03.github.io/mudi/static/media/movie_poster.c2b7f5b28d4542da2610.jpeg",
+    "static/media/banner01.png": "https://kimseowoo03.github.io/mudi/static/media/banner01.c0e2d932958342921781.png",
+    "static/media/movie_spoiler.jpg": "https://kimseowoo03.github.io/mudi/static/media/movie_spoiler.88b758503c46b737ba72.jpg",
+    "static/media/user_profile.jpg": "https://kimseowoo03.github.io/mudi/static/media/user_profile.00bb5cf66ea4600ab529.jpg",
+    "static/media/icon-cinema.svg": "https://kimseowoo03.github.io/mudi/static/media/icon-cinema.9ee29c5d14d6c86529c2193ac2aa44f9.svg",
+    "index.html": "https://kimseowoo03.github.io/mudi/index.html",
+    "static/media/icon-menu.svg": "https://kimseowoo03.github.io/mudi/static/media/icon-menu.7c5c062ada8cd11aefe3c43dcfea1ddc.svg",
+    "static/media/icon-Home.svg": "https://kimseowoo03.github.io/mudi/static/media/icon-Home.c2b66fa0d009a802fcc501b05c9772fe.svg",
+    "static/media/icon-Magazine.svg": "https://kimseowoo03.github.io/mudi/static/media/icon-Magazine.3e16105b195e17cafe4e9f9ccf1d1d98.svg",
+    "static/media/x-icon.svg": "https://kimseowoo03.github.io/mudi/static/media/x-icon.081e08d8e2b01ab30fc5d83d66692f3f.svg",
+    "static/media/icon-wishlist.svg": "https://kimseowoo03.github.io/mudi/static/media/icon-wishlist.e7f0107e282601b6a27dc114d51f96ae.svg",
+    "main.fd7e4184.css.map": "https://kimseowoo03.github.io/mudi/static/css/main.fd7e4184.css.map",
+    "main.d813b4de.js.map": "https://kimseowoo03.github.io/mudi/static/js/main.d813b4de.js.map",
+    "787.3fd2effd.chunk.js.map": "https://kimseowoo03.github.io/mudi/static/js/787.3fd2effd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.56aaa5be.css",
-    "static/js/main.d6b5e759.js"
+    "static/css/main.fd7e4184.css",
+    "static/js/main.d813b4de.js"
   ]
 }
