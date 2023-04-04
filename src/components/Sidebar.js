@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useStore from "../store/useStore";
 
 import NavItem from "./NavItem";
@@ -23,19 +24,19 @@ const NavItemsData = [
     src: magazine_icon,
     alt: "magazine_icon",
     nav_name: "매거진",
-    link_to: "/bb"
+    link_to: false
   },
   {
     src: cinema_icon,
     alt: "cinema_icon",
     nav_name: "상영회",
-    link_to: "/aa"
+    link_to: false
   },
   {
     src: wishlist_icon,
     alt: "home_icon",
     nav_name: "위시리스트",
-    link_to: "/wishlist"
+    link_to: false
   },
 ];
 
@@ -51,9 +52,9 @@ const Sidebar = () => {
           <img src={close_icon} alt="close_icon" />
         </div>
         <div className={style.logo}>
-          <a href="{()=>false}">
+          <Link to="/">
             <img src={logo} alt="mudi_logo" />
-          </a>
+          </Link>
         </div>
         <ul className={style.nav}>
           {NavItemsData.map((data, index) => {

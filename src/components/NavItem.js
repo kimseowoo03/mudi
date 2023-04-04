@@ -4,7 +4,7 @@ const NavItem = (props) => {
   const data = props.data;
   return (
     <li>
-      <Link to={data.link_to}>
+      <Link to={data.link_to && data.link_to}>
         <img src={data.src} alt={data.alt} />
         <span>{data.nav_name}</span>
       </Link>
