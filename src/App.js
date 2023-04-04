@@ -7,7 +7,7 @@ import style from "./styles/App.module.scss"
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <div className={style.container}>
     <Sidebar />
     <Routes >
