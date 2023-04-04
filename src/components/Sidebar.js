@@ -1,3 +1,5 @@
+import useStore from "../store/useStore";
+
 import NavItem from "./NavItem";
 
 import style from "../styles/Sidebar.module.scss";
@@ -38,10 +40,14 @@ const NavItemsData = [
 ];
 
 const Sidebar = () => {
+  const {sidebarActive, setSidebarActive} = useStore();
+
+  const sidebarClass = sidebarActive ? style.containerActive : style.container;
+
   return (
-    <div className={style.container}>
+    <div className={sidebarClass}>
       <div className={style.sidebar}>
-        <div className={style.close_btn}>
+        <div className={style.close_btn} onClick={() => {setSidebarActive()}}>
           <img src={close_icon} alt="close_icon" />
         </div>
         <div className={style.logo}>

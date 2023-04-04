@@ -1,8 +1,8 @@
 import { create } from "zustand";
 
 const useStore = create((set) => ({
-  movieId: "",
-  setMovieId: (selectMovieId) => set({movieId: selectMovieId})
+  sidebarActive: false,
+  setSidebarActive: () => set((state) => ({sidebarActive: !state.sidebarActive})),
 }));
 
 export default useStore;
