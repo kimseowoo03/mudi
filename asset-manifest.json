@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mudi/static/css/main.56aaa5be.css",
-    "main.js": "/mudi/static/js/main.d6b5e759.js",
+    "main.js": "/mudi/static/js/main.59a99eb0.js",
     "static/js/787.3fd2effd.chunk.js": "/mudi/static/js/787.3fd2effd.chunk.js",
     "static/media/banner03.png": "/mudi/static/media/banner03.ca645b71dc4fd1b836d3.png",
     "static/media/banner02.png": "/mudi/static/media/banner02.25cca66083e556204f43.png",
@@ -17,11 +17,11 @@
     "static/media/x-icon.svg": "/mudi/static/media/x-icon.081e08d8e2b01ab30fc5d83d66692f3f.svg",
     "static/media/icon-wishlist.svg": "/mudi/static/media/icon-wishlist.e7f0107e282601b6a27dc114d51f96ae.svg",
     "main.56aaa5be.css.map": "/mudi/static/css/main.56aaa5be.css.map",
-    "main.d6b5e759.js.map": "/mudi/static/js/main.d6b5e759.js.map",
+    "main.59a99eb0.js.map": "/mudi/static/js/main.59a99eb0.js.map",
     "787.3fd2effd.chunk.js.map": "/mudi/static/js/787.3fd2effd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.56aaa5be.css",
-    "static/js/main.d6b5e759.js"
+    "static/js/main.59a99eb0.js"
   ]
 }
