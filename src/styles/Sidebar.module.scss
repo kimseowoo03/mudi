@@ -140,7 +140,7 @@ body {
   }
 }
 
-@media (max-width: 24.375rem) {
+@media (max-width: 43.75rem) {
   .container {
     width: 100%;
     border-right: 0;
@@ -165,11 +165,10 @@ body {
     background-color: #121212;
 
     img {
-      filter: invert(100);
-      width: 2.5rem;
-      height: 1.25rem;
+      width: 3.75rem;
+      height: 1.875rem;
       margin-left: 1rem;
-      margin-top: 1.25rem;
+      margin-top: 0.938rem;
     }
   }
 
@@ -182,6 +181,9 @@ body {
       margin: 1.25rem 1rem;
       width: auto;
       height: 5.313rem;
+    }
+    li:first-child {
+      margin-top: 1.25rem;
     }
     a {
       padding-top: 0;
