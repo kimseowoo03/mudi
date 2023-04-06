@@ -5,6 +5,12 @@ import { db } from '../firebaseConfig';
 import style from '../styles/MovieDetail.module.scss';
 import IframeComponent from '../components/IframeComponent';
 
+import backIcon from '../assets/icon-backArrow.svg';
+import wishIcon from '../assets/icon-heartInfo.svg';
+import shareIcon from '../assets/icon-share.svg';
+import supportIcon from '../assets/icon-donate.svg';
+import bgImg from '../assets/banner01.png';
+
 const MovieDetail = () => {
   const [videoClick, setVideoClick] = useState(false);
   const [moviesData, setMovieData] = useState([]);
@@ -20,21 +26,24 @@ const MovieDetail = () => {
 
   return (
     <div className={style.container}>
-      <div className={style.container_bg_img}>
-        <div className={style.top_menu}></div>
-        <div className={style.movie_contents}>
-          <div className={style.movie_content}>
+      <div className={style.bgImg}>
+        <img src={bgImg} alt='bgImg' />
+      </div>
+      <div className={style.top_menu}>
+        <img src={backIcon} alt='backIcon' />
+      </div>
+      <div className={style.movie_contents}>
+        <div className={style.movie_content}>
           {videoClick && 
-              <div style={{position: "fixed", top: "0", left: "0", width: "100%", height: "100%", zIndex: "9999", }}>
-                <IframeComponent url={moviesData.url}/>
-              </div>
-              }
-            <div className={style.play_btn}>
-              <button onClick={()=> {setVideoClick(!videoClick)}} />
+            <div style={{position: "fixed", top: "0", left: "0", width: "100%", height: "100%", zIndex: "9999", }}>
+              <IframeComponent url={moviesData.url}/>
             </div>
+          }
+          <div className={style.play_btn} onClick={()=> {setVideoClick(!videoClick)}}>
+            <button />
           </div>
-          <div className={style.movie_poster_content}></div>
         </div>
+        <div className={style.movie_poster_content}></div>
       </div>
       <div className={style.movieInfo_otherMenu}>
         <div className={style.movie_moreInfo}>
@@ -67,19 +76,20 @@ const MovieDetail = () => {
           </div>
         </div>
         <div className={style.movie_otherMenu}>
-          <div className={style.wish_btn}></div>
-          <div className={style.share_btn}></div>
-          <div className={style.support_btn}></div>
+          <div className={style.wish_btn}>
+            <img src={wishIcon} alt='wishIcon' />
+          </div>
+          <div className={style.share_btn}>
+            <img src={shareIcon} alt='shareIcon' />
+          </div>
+          <div className={style.support_btn}>
+            <img src={supportIcon} alt='supportIcon' />
+            <span>창작자에게 후원하기</span>
+          </div>
         </div>
       </div>
       <div className={style.qna_photo_tabMenu}>
-        <input
-          type="radio"
-          name="tabs"
-          id="tab1"
-          className={style.tab1}
-          defaultChecked={true}
-        />
+        <input type="radio" name="tabs" id="tab1" className={style.tab1} defaultChecked={true} />
         <label htmlFor='tab1'>Q&A</label>
         <input type="radio" name="tabs" id="tab2" className={style.tab2} />
         <label htmlFor='tab2'>포토</label>
