@@ -31,11 +31,13 @@ const Aspoiler = () => {
           return (
             <div key={movie.id} className={style.spoiler_content}>
               <Link to={movie.id}>
-              <img src={movie_spoiler} alt="movie_spoiler_image" />
-              <div className={style.spoiler_text}>
-                <p>{movie.oneSentenceSpoiler}</p>
-                <p>{movie.director}</p>
-              </div>
+                <div className={style.gradientImg}>
+                  <img src={movie_spoiler} alt="movie_spoiler_image" />
+                </div>
+                <div className={style.spoiler_text}>
+                  <p>{movie.oneSentenceSpoiler}</p>
+                  <p>{movie.director}</p>
+                </div>
               </Link>
             </div>
           );
