@@ -19,7 +19,7 @@ const Home = () => {
 
   return(
     <div>
-      {windowWidth < 391 && <MobileHeader />}
+      {windowWidth < 701 && <MobileHeader />}
      <Banner />
      <Aspoiler />
      <FullMovie />
