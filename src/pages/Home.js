@@ -5,6 +5,7 @@ import Banner from "../components/Banner";
 import FullMovie from "../components/FullMovie";
 import Footer from "../components/Footer"
 import MobileHeader from "../components/MobileHeader"
+import HashtagMovie from "../components/HashtagMovie";
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -21,6 +22,7 @@ const Home = () => {
     <div>
       {windowWidth < 701 && <MobileHeader />}
      <Banner />
+     <HashtagMovie />
      <Aspoiler />
      <FullMovie />
      <Footer />
