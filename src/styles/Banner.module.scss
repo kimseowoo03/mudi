@@ -11,7 +11,7 @@ li {
   max-height: 25rem;
   margin: 2rem;
   display: grid;
-  grid-template-columns: 3.4fr 1fr;
+  grid-template-columns: 1fr 15.625rem;
   grid-template-rows: 1fr;
   grid-gap: 1.313rem;
 }
@@ -39,6 +39,11 @@ li {
   position: relative;
   flex: 0 0 100%;
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .snapper {
     position: absolute;
     top: 0;
@@ -46,41 +51,6 @@ li {
     width: 100%;
     height: 100%;
     scroll-snap-align: center;
-  }
-}
-.slide:first-child {
-  background: url('../assets/banner01.png') center center no-repeat;
-  background-size: cover;
-}
-.slide:nth-child(2) {
-  background: url('../assets/banner02.png') center center no-repeat;
-  background-size: cover;
-}
-.slide:last-child {
-  background: url('../assets/banner03.png') center center no-repeat;
-  background-size: cover;
-}
-
-.slide_nav {
-  position: absolute;
-  right: 0;
-  bottom: 1.25rem;
-  left: 0;
-  text-align: center;
-  display: none;
-
-  .slide_btn_item {
-    display: inline-block;
-  
-    .slide_btn {
-      display: inline-block;
-      width: 0.75rem;
-      height: 0.75rem;
-      background-color: #333;
-      background-clip: content-box;
-      border: 0.313rem solid transparent;
-      border-radius: 50%;
-    }
   }
 }
 
@@ -185,21 +155,21 @@ li {
   }
 }
 
-@media (max-width: 24.375rem) {
+@media (max-width: 43.75rem) {
   .banner {
-    max-width: 22.375rem;
+    max-width: 100%;
     max-height: 27.813rem;
     margin: 2rem 1rem;
     margin-top: 0;
   }
   
   .slider {
-    max-width: 22.375rem;
+    max-width: 100%;
     height: 27.813rem;
 
     .slide {
       img {
-        max-width: 22.375rem;
+        max-width: 100%;
         height: 27.813rem;
       }
     }

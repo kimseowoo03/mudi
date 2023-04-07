@@ -10,7 +10,7 @@ import home_icon from "../assets/icon-Home.svg";
 import magazine_icon from "../assets/icon-Magazine.svg";
 import cinema_icon from "../assets/icon-cinema.svg";
 import wishlist_icon from "../assets/icon-wishlist.svg";
-import close_icon from "../assets/x-icon.svg";
+import close_icon from "../assets/icon-x.svg";
 import user_profile from "../assets/user_profile.jpg";
 
 const NavItemsData = [

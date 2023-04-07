@@ -22,12 +22,24 @@
   position: relative;
   flex: 0 0 22.5rem;
 
-  img {
+  .gradientImg {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 72%, #000 100%);
+    background-size: cover;
+    background-position: center center;
     width: 100%;
     height: 13.75rem;
     border-radius: 0.625rem;
-  }
 
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 0.625rem;
+    }
+  }
   .spoiler_text {
     position: absolute;
     left: 0.938rem;
@@ -47,14 +59,12 @@
 }
 
 @media (max-width: 67.5rem) {
-  .spoiler_content {
-    img {
-      max-height: 15.313rem;
-    }
+  .gradientImg {
+    height: 15.313rem;
   }
 }
 
-@media (max-width: 24.375rem) {
+@media (max-width: 43.75rem) {
   .container {
     margin-left: 1rem;
   }
@@ -66,7 +76,7 @@
   .spoiler_content {
     max-width: 20rem;
   
-    img {
+    .gradientImg {
       width: 20rem;
       height: 11.25rem;
     }
