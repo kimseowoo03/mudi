@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import MovieDetail from './pages/MovieDetail';
 
 import style from "./styles/App.module.scss"
+import Register from './pages/Register';
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
     <Routes >
         <Route path="/" element={<Home />} />
         <Route path=":id" element={<MovieDetail />}/>
+        <Route path='/register' element={<Register />} />
       </Routes>
     </div>
     </BrowserRouter>
