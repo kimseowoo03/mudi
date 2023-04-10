@@ -7,7 +7,7 @@ import style from "../styles/HashtagMovie.module.scss"
 import movie_poster from "../assets/movie_poster.jpeg";
 import MovieItem from "./MovieItem";
 
-const hashtagGenres = ["드라마", "코미디", "로맨스", "스릴러", "공포", "다큐", "액션", "서부극", "SF", "판타지" ]
+const hashtagGenres = ["전체","드라마", "코미디", "로맨스", "스릴러", "공포", "다큐", "액션", "서부극", "SF", "판타지" ]
 
 const HashtagMovie = () => {
   const [moviesData, setMovieData] = useState([]);
