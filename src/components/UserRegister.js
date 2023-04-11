@@ -3,6 +3,10 @@ import { useRef, useState } from "react";
 import { auth } from "../firebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
+import style from "../styles/UserRegister.module.scss";
+
+import backArrowIcon from "../assets/icon-backArrow.svg";
+
 const UserRegister = () => {
   const [producer, setProducer] = useState();
   const emailRef = useRef();
@@ -33,67 +37,70 @@ const UserRegister = () => {
   };
 
   return (
-    <div>
-      <p>{"<"}</p>
-      <h2>회원가입</h2>
-      <form onSubmit={submitHandler}>
-        <div>
-          <span> 글자입니다</span>
-          <input
-            type="radio"
-            name="membership"
-            value="시청자"
-            onChange={() => {
-              setProducer("시청자");
-            }}
-            style={{ backgroundColor: "red" }}
-          />
-          <label>시청자</label>
-          <input
-            type="radio"
-            name="membership"
-            value="제작자"
-            onChange={() => {
-              setProducer("제직자");
-            }}
-            style={{ backgroundColor: "red" }}
-          />
-          <label>제직자</label>
+    <div className={style.register_container}>
+      <div className={style.contents}>
+        <div className={style.top_menu}>
+          <img src={backArrowIcon} alt="backArrowIcon" />
         </div>
-        <div>
-          <label>이메일</label>
-          <input
-            style={{ color: "black" }}
-            ref={emailRef}
-            type="email"
-            placeholder="이메일을 입력하세요"
-          />
-          <button style={{ backgroundColor: "red" }}>중복확인</button>
-        </div>
-        <div>
-          <label>비밀번호</label>
-          <input
-            style={{ color: "black" }}
-            ref={passwordRef}
-            type="password"
-            autoComplete="off"
-            placeholder="비밀번호를 입력하세요"
-          />
-        </div>
-        <div>
-          <label>비밀번호 확인</label>
-          <input
-            style={{ color: "black" }}
-            ref={rePasswordRef}
-            type="password"
-            autoComplete="off"
-            placeholder="비밀번호를 재입력하세요"
-          />
-        </div>
-        <button type="submit" style={{ backgroundColor: "red" }}>
-          확인
-        </button>
-      </form>
+        <h2>회원가입</h2>
+        <form onSubmit={submitHandler} autoComplete="off">
+          <div className={style.membership_type}>
+            <input
+              id="viewer"
+              type="radio"
+              name="membership"
+              value="시청자"
+              onChange={() => {
+                setProducer("시청자");
+              }}
+            />
+            <label htmlFor="viewer">시청자</label>
+            <input
+              id="producer"
+              type="radio"
+              name="membership"
+              value="제작자"
+              onChange={() => {
+                setProducer("제작자");
+              }}
+            />
+            <label htmlFor="producer">제작자</label>
+          </div>
+          <div className={`${style.email_input} ${style.item}`}>
+            <label htmlFor="userEmail">이메일</label>
+            <div className={style.email_duplication_check}>
+              <input
+                ref={emailRef}
+                type="email"
+                id="userEmail"
+                placeholder="이메일을 입력하세요"
+              />
+              <button type="button">중복 확인</button>
+            </div>
+          </div>
+          <div className={`${style.pw_input} ${style.item}`}>
+            <label htmlFor="userPw">비밀번호</label>
+            <input
+              ref={passwordRef}
+              type="password"
+              id="userPw"
+              placeholder="비밀번호를 입력하세요"
+            />
+          </div>
+          <div className={`${style.pw_check_input} ${style.item}`}>
+            <label htmlFor="userPwCheck">비밀번호 확인</label>
+            <input
+              ref={rePasswordRef}
+              type="password"
+              id="userPwCheck"
+              placeholder="비밀번호를 재입력하세요"
+            />
+          </div>
+          <button type="submit">
+            확인
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

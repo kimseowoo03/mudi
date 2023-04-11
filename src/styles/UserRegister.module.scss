@@ -1,0 +1,155 @@
+.register_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .contents {
+    width: 29.063rem;
+    height: 38.75rem;
+    background: #1c1c1c;
+    border: 1px solid #272727;
+    border-radius: 0.625rem;
+    padding: 2rem;
+
+    .top_menu {
+      display: none;
+    }
+    form > * {
+      margin-top: 1.5rem;
+    }
+
+    input[type=radio] {
+      display: none;
+    }
+    input, button {
+      border: none;
+      outline: none;
+      border-radius: 0.625rem;
+      font-size: 1.063rem;
+    }
+    input::placeholder {
+      color: #000;
+    }
+    input[type=email], input[type=password] {
+      color: #000;
+      padding-left: 0.938rem;
+    }
+    
+    .membership_type {
+      display: flex;
+      gap: 1.063rem;
+
+      label {
+        width: 100%;
+        height: 4.688rem;
+        background: #ebe7e1;
+        color: #000;
+        font-size: 1.063rem;
+        border-radius: 0.625rem;
+        text-align: center;
+        line-height: 4.688rem;
+      }
+    } 
+    input[id=viewer]:checked ~ label[for=viewer], 
+    input[id=producer]:checked ~ label[for=producer] {
+      background: #456444;
+      color: #fff;
+    }
+    
+    .email_duplication_check {
+      display: grid;
+      grid-template-columns: 2.11fr 1fr;
+      gap: 1.063rem;
+      height: 3.75rem;
+      margin-top: 0.313rem;
+    }
+    
+    input[type=email] {
+      background: #d9d9d9;
+    }
+    button[type=button] {
+      background: #4b4b4b;
+      color: #fff;
+    }
+    input[type=password] {
+      width: 100%;
+      margin-top: 0.313rem;
+      height: 3.75rem;
+      background: #ebe7e1;
+    }
+    button[type=submit] {
+      width: 100%;
+      height: 4.063rem;
+      background: #456444;
+      color: #fff;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (max-width: 67.5rem) {
+  .register_container {
+    .contents {
+      height: 39.688rem;
+  
+      h2 {
+        font-size: 2.125rem;
+      }
+      form > * {
+        margin-top: 1.625rem;
+      }
+      .membership_type {
+        label {
+          padding: 0;
+        }
+      }
+      .item label {
+        font-size: 0.938rem;
+      }
+      button[type=submit] {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 43.75rem) {
+  .register_container {
+    margin: 0 2rem;
+    overflow: hidden;
+    align-items: normal;
+
+    .contents {
+      background: none;
+      border: none;
+      padding: 0;
+      width: auto;
+      height: auto;
+
+      .top_menu {
+        display: block;
+        height: 3.125rem;
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-top: 0.938rem;
+        }
+      }
+      h2 {
+        margin-top: 1.25rem;
+      }
+      .email_duplication_check {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 0.625rem;
+      }
+      input[type=email],
+      button[type=button] {
+        height: 3.75rem;
+      }
+    }
+  }
+}
