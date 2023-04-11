@@ -1,3 +1,30 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cafe24Oneprettynight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  box-sizing: border-box;
+  font-family: Pretendard-Regular;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
 .container{
   display: grid;
   grid-template-columns: min-content 1fr;
