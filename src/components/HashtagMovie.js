@@ -36,11 +36,11 @@ const genreItemClick = (event) => {
 
   // 전체 일 때, N일 때 두가지 데이터 불러오기
   return (
-    <div>
+    <div className={style.hashtag}>
       <h2>{selectedGenre}</h2>
-      <ul>
+      <ul className={style.hashtagSelect}>
         {hashtagGenres.map((genre, index) => {
-          return <li onClick={genreItemClick} key={index}>{genre}</li>
+          return <li className={style.hashtagItem} onClick={genreItemClick} key={index}>{genre}</li>
         })}
       </ul>
       <div className={style.full_movie_contents}>
