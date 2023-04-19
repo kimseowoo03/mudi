@@ -22,22 +22,26 @@
       font-size: 0.875rem;
       margin-top: 0.625rem;
 
+      &:first-child {
+        margin-top: 0;
+        font-weight: bold;
+      }
+
       a {
         font-size: 0.75rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
-      a:hover {
-        text-decoration: underline;
-      }
+
       span {
         font-size: 0.75rem;
+
+        &:first-child {
+          margin-right: 1.875rem;
+        }
       }
-      span:first-child {
-        margin-right: 1.875rem;
-      }
-    }
-    li:first-child {
-      margin-top: 0;
-      font-weight: bold;
     }
   }
 }
@@ -69,7 +73,6 @@
 @media (max-width: 76.875rem) {
   .footer {
     height: 12.5rem;
-    display: grid;
     grid-template-columns: min-content max-content 1fr;
     gap: 3.125rem;
 
@@ -84,7 +87,6 @@
 
 @media (max-width: 53.75rem) {
   .footer {
-    display: grid;
     height: 18.75rem;
     padding: 2.844rem 3.125rem;
     grid-template-columns: 1fr;
@@ -112,15 +114,17 @@
       grid-template-areas: 
       "info upload"
       "connect connect";
-  
-      ul:first-child {
-        grid-area: info;
-      }
-      ul:nth-child(2) {
-        grid-area: upload;
-      }
-      ul:last-child {
-        grid-area: connect;
+
+      ul {
+        &:first-child {
+          grid-area: info;
+        }
+        &:nth-child(2) {
+          grid-area: upload;
+        }
+        &:last-child {
+          grid-area: connect;
+        }
       }
     }
   }

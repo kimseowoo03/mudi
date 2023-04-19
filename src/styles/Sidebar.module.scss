@@ -9,10 +9,7 @@
   transition: 0.5s;
 }
 
-.top_bar {
-  display: none;
-}
-
+.top_bar,
 .close_btn {
   display: none;
 }
@@ -36,14 +33,15 @@
     text-align: center;
     line-height: 3.75rem;
     margin: 0.625rem 0.938rem;
-  }
-  li:first-child {
-    margin-top: 0;
-  }
-  li:hover {
-    border-radius: 0.625rem;
-    background-color: #456444;
-    transition: all 0.3s;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:hover {
+      border-radius: 0.625rem;
+      background-color: #456444;
+      transition: all 0.3s;
+    }
   }
 
   a {
@@ -174,9 +172,10 @@
       margin: 1.25rem 1rem;
       width: auto;
       height: 5.313rem;
-    }
-    li:first-child {
-      margin-top: 1.25rem;
+
+      &:first-child {
+        margin-top: 1.25rem;
+      }
     }
     a {
       padding-top: 0;

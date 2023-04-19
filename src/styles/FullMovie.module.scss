@@ -8,14 +8,15 @@
   gap: 1.25rem;
   overflow-x: scroll;
   white-space: nowrap;
-}
-.full_movie_contents::-webkit-scrollbar {
-  background-color: transparent;
-  height: 0.625rem;
-}
-.full_movie_contents::-webkit-scrollbar-thumb {
-  background-color: #1c1c1c;
-  border-radius: 0.625rem;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 0.625rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #1c1c1c;
+    border-radius: 0.625rem;
+  }
 }
 
 @media (max-width: 43.75rem) {
