@@ -43,7 +43,7 @@ const UserRegister = () => {
           <img src={backArrowIcon} alt="backArrowIcon" />
         </div>
         <h2>회원가입</h2>
-        <form onSubmit={submitHandler} autoComplete="off">
+        <form onSubmit={submitHandler}>
           <div className={style.membership_type}>
             <input
               id="viewer"
