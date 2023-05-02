@@ -1,3 +1,5 @@
+$main-radius: 0.625rem;
+
 .container {
   margin-left: 2rem;
 }
@@ -8,19 +10,24 @@
   gap: 1.25rem;
   overflow-x: scroll;
   white-space: nowrap;
-}
-.spoiler_contents::-webkit-scrollbar {
-  background-color: transparent;
-  height: 0.625rem;
-}
-.spoiler_contents::-webkit-scrollbar-thumb {
-  background-color: #1c1c1c;
-  border-radius: 0.625rem;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 0.625rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #1c1c1c;
+    border-radius: $main-radius;
+  }
 }
 
 .spoiler_content {
   position: relative;
   flex: 0 0 22.5rem;
+
+  &:last-child {
+    margin-right: 2rem;
+  }
 
   .gradientImg {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 72%, #000 100%);
@@ -28,7 +35,7 @@
     background-position: center center;
     width: 100%;
     height: 13.75rem;
-    border-radius: 0.625rem;
+    border-radius: $main-radius;
 
     img {
       width: 100%;
@@ -37,25 +44,26 @@
       top: 0;
       left: 0;
       z-index: -1;
-      border-radius: 0.625rem;
+      border-radius: $main-radius;
     }
   }
   .spoiler_text {
     position: absolute;
     left: 0.938rem;
     bottom: 1.25rem;
+    
+    p {
+      font-family: Cafe24Oneprettynight;
 
-    p:first-child {
-      font-size: 1rem;
-    }
-    p:last-child {
-      font-size: 0.875rem;
-      margin-top: 0.313rem;
+      &:first-child {
+        font-size: 1rem;
+      }
+      &:last-child {
+        font-size: 0.875rem;
+        margin-top: 0.313rem;
+      }
     }
   }
-}
-.spoiler_content:last-child {
-  margin-right: 2rem;
 }
 
 @media (max-width: 67.5rem) {
@@ -75,14 +83,15 @@
 
   .spoiler_content {
     max-width: 20rem;
+
+    &:last-child {
+      margin-right: 1rem;
+    }
   
     .gradientImg {
       width: 20rem;
       height: 11.25rem;
     }
-  }
-  .spoiler_content:last-child {
-    margin-right: 1rem;
   }
   
   .spoiler_text {

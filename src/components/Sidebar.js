@@ -48,8 +48,8 @@ const Sidebar = () => {
   return (
     <div className={sidebarClass}>
       <div className={style.sidebar}>
-        <div className={style.close_btn} onClick={() => {setSidebarActive()}}>
-          <img src={close_icon} alt="close_icon" />
+        <div className={style.close_btn}>
+          <img src={close_icon} alt="close_icon" onClick={() => {setSidebarActive()}} />
         </div>
         <div className={style.logo}>
           <Link to="/">

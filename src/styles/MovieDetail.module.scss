@@ -1,6 +1,3 @@
-li {
-  list-style: none;
-}
 .container {
   margin: 2rem;
 }
@@ -32,6 +29,7 @@ li {
   background: #fff;
   border-radius: 50%;
   cursor: pointer;
+  display: none;
 }
 .play_btn button {
   background-color: transparent;
@@ -67,12 +65,13 @@ li {
       padding: 0 0.625rem;
       color: rgba(255, 255, 255, 0.5);
       border-right: 1px solid rgba(255, 255, 255, 0.5);
-    }
-    li:first-child {
-      padding-left: 0;
-    }
-    li:last-child {
-      border-right: 0;
+
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        border-right: 0;
+      }
     }
   }
 }
@@ -87,12 +86,13 @@ li {
       background: #1c1c1c;
       border-radius: 1.25rem;
       margin-right: 0.625rem;
-    }
-    li:first-child {
-      background: #456444;
-    }
-    li:last-child {
-      margin-right: 0;
+
+      &:first-child {
+        background: #456444;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -101,9 +101,10 @@ li {
 
   p {
     color: rgba(255, 255, 255, 0.5);
-  }
-  p:last-child {
-    margin-top: 0.625rem;
+
+    &:last-child {
+      margin-top: 0.625rem;
+    }
   }
 }
 .movie_summary {
@@ -153,6 +154,11 @@ li {
 
   input[type=radio] {
     display: none;
+
+    &:checked + label {
+      color: #fff;
+      border-top: 2px solid #fff;
+    }
   }
   label {
     width: 50%;
@@ -162,10 +168,6 @@ li {
     color: rgba(255, 255, 255, 0.5);
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     padding: 2.188rem 0;
-  }
-  input[type=radio]:checked + label {
-    color: #fff;
-    border-top: 2px solid #fff;
   }
   .tab_content {
     width: 100%;
@@ -324,21 +326,23 @@ li {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
-    }
-    p:has(+ .movie_summary_more_btn:checked) {
-      -webkit-line-clamp: unset;
+
+      &:has(+ .movie_summary_more_btn:checked) {
+        -webkit-line-clamp: unset;
+      }
     }
     .movie_summary_more_btn {
       display: block;
       appearance: none;
       cursor: pointer;
       margin-top: 0.625rem;
-    }
-    .movie_summary_more_btn::before {
-      content: "더보기";
-    }
-    .movie_summary_more_btn:checked:before {
-      content: "닫기";
+
+      &::before {
+        content: "더보기";
+      }
+      &:checked:before {
+        content: "닫기";
+      }
     }
   }
   .movie_otherMenu {
