@@ -14,7 +14,6 @@ const HashtagMovie = () => {
   const [selectedGenre, setSelectedGenre] = useState("전체")
 
   useEffect(()=>{
-    //TODO: 영화 쿼리 사용해서 데이터들 불러오기
     const queryGetData = async () => {
       const movies = collection(db, "movies");
       const q = query(collection(db, "movies"), where("hashtag", "array-contains", selectedGenre))
@@ -40,7 +39,7 @@ const genreItemClick = (event) => {
       <h2>{selectedGenre}</h2>
       <ul className={style.hashtagSelect}>
         {hashtagGenres.map((genre, index) => {
-          return <li className={style.hashtagItem} onClick={genreItemClick} key={index}>{genre}</li>
+          return <li className={selectedGenre ===  genre ? style["hashtagItem-clicked"] :style.hashtagItem} onClick={genreItemClick} key={index}>{genre}</li>
         })}
       </ul>
       <div className={style.full_movie_contents}>
