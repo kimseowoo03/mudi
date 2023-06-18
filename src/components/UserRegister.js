@@ -85,6 +85,7 @@ const UserRegister = () => {
               type="password"
               id="userPw"
               placeholder="비밀번호를 입력하세요"
+              autoComplete="off"
             />
           </div>
           <div className={`${style.pw_check_input} ${style.item}`}>
@@ -94,6 +95,7 @@ const UserRegister = () => {
               type="password"
               id="userPwCheck"
               placeholder="비밀번호를 재입력하세요"
+              autoComplete="off"
             />
           </div>
           <button type="submit">
