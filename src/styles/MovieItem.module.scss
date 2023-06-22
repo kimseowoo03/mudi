@@ -1,4 +1,5 @@
-.full_movie_content {
+.movieItem {
+  cursor: pointer;
   flex: 0 0 13.75rem;
 
   &:last-child {
@@ -35,7 +36,7 @@
 }
 
 @media (max-width: 67.5rem) {
-  .full_movie_content {
+  .movieItem {
     flex: 0 0 11.25rem;
 
     img {
@@ -59,11 +60,7 @@
 }
 
 @media (max-width:43.75rem) {
-  .container {
-    margin-left: 1rem;
-  }
-  
-  .full_movie_content {
+  .movieItem {
     flex: 0 0 8.75rem;
 
     &:last-child {

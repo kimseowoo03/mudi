@@ -8,7 +8,7 @@ const MobileHeader = () => {
   const {setSidebarActive} = useStore();
 
   return (
-    <div className={style.container}>
+    <div className={style.mobileHeader_container}>
       <div className={style.hamberger_menu} onClick={()=> {setSidebarActive()}}>
         <img src={menu_icon} alt="menu-icon" />
       </div>

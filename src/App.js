@@ -9,7 +9,7 @@ import Register from "./pages/Register";
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <div className={style.container}>
+      <div className={style.app_container}>
         <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />

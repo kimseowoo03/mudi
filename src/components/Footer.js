@@ -7,11 +7,11 @@ import youtubeIcon from '../assets/youtube.svg';
 
 const Footer = () => {
   return (
-  <div className={style.footer}>
+  <div className={style.footer_container}>
     <div className={style.logo}>
       <img src={footerLogo} alt="footerLogo" />
     </div>
-    <div className={style.footerMenu}>
+    <div className={style.footer_menu}>
       <ul>
         <li>정보</li>
         <li><a href="{() => false}">서비스 소개</a></li>
@@ -33,7 +33,7 @@ const Footer = () => {
         </li>
       </ul>
     </div>
-    <div className={style.snsMenu}>
+    <div className={style.sns_menu}>
       <div className={style.instagram}>
         <a href="{() => false}"><img src={instagramIcon} alt="instagramIcon" /></a>
       </div>

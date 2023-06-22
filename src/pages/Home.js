@@ -7,6 +7,8 @@ import Footer from "../components/Footer"
 import MobileHeader from "../components/MobileHeader"
 import HashtagMovie from "../components/HashtagMovie";
 
+import style from "../styles/Home.module.scss";
+
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -19,7 +21,7 @@ const Home = () => {
   });
 
   return(
-    <div>
+    <div className={style.home_container}>
       {windowWidth < 701 && <MobileHeader />}
      <Banner />
      <HashtagMovie />

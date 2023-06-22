@@ -11,7 +11,7 @@ import magazine_icon from "../assets/icon-Magazine.svg";
 import cinema_icon from "../assets/icon-cinema.svg";
 import wishlist_icon from "../assets/icon-wishlist.svg";
 import close_icon from "../assets/icon-x.svg";
-import user_profile from "../assets/user_profile.jpg";
+import user_profile from "../assets/user_profile.png";
 
 const NavItemsData = [
   {

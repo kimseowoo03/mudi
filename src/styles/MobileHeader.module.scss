@@ -1,4 +1,4 @@
-.container {
+.mobileHeader_container {
   height: 3.125rem;
   display: grid;
   margin: 0 1rem;
@@ -7,8 +7,16 @@
   justify-items: center;
   margin-right: 2rem;
 
-  .logo img {
-    width: 2.363rem;
-    height: 1.5rem;
+  .hamberger_menu {
+    cursor: pointer;
+  }
+
+  .logo {
+    cursor: pointer;
+    
+    img {
+      width: 2.363rem;
+      height: 1.5rem;
+    }
   }
 }
