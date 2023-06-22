@@ -9,7 +9,9 @@ import backIcon from '../assets/icon-backArrow.svg';
 import wishIcon from '../assets/icon-heartInfo.svg';
 import shareIcon from '../assets/icon-share.svg';
 import supportIcon from '../assets/icon-donate.svg';
-import bgImg from '../assets/banner01.png';
+import stillCutImg01 from "../assets/stillcut01.png";
+import stillCutImg02 from "../assets/stillcut02.png";
+import stillCutImg03 from "../assets/stillcut03.png";
 
 const MovieDetail = () => {
   const [videoClick, setVideoClick] = useState(false);
@@ -25,28 +27,24 @@ const MovieDetail = () => {
   },[id])
 
   return (
-    <div className={style.container}>
-      <div className={style.bgImg}>
-        <img src={bgImg} alt='bgImg' />
-      </div>
+    <div className={style.movieDetail_container}>
       <div className={style.top_menu}>
         <img src={backIcon} alt='backIcon' />
       </div>
       <div className={style.movie_contents}>
         <div className={style.movie_content}>
-          {videoClick && 
-            <div style={{position: "fixed", top: "0", left: "0", width: "100%", height: "100%", zIndex: "9999", }}>
-              <IframeComponent url={moviesData.url}/>
-            </div>
-          }
-          <div className={style.play_btn} onClick={()=> {setVideoClick(!videoClick)}}>
-            <button />
-          </div>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5CQ_iInQnWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <div className={style.movie_poster_content}></div>
+        <div className={style.stillCut_content}>
+          <ul>
+            <li><img src={stillCutImg01} alt='stillCutImg01' /></li>
+            <li><img src={stillCutImg02} alt='stillCutImg02' /></li>
+            <li><img src={stillCutImg03} alt='stillCutImg03' /></li>
+          </ul>
+        </div>
       </div>
       <div className={style.movieInfo_otherMenu}>
-        <div className={style.movie_moreInfo}>
+        <div className={style.movie_Info}>
           <div className={style.movie_title}>
             <h2>{moviesData.title}</h2>
           </div>
@@ -72,20 +70,20 @@ const MovieDetail = () => {
           <div className={style.movie_summary}>
             <h2>줄거리</h2>
             <p>{moviesData.summary}</p>
-            <input type="checkbox" className={style.movie_summary_more_btn} />
+            <input type="checkbox" className={style.moreView_btn} />
           </div>
         </div>
         <div className={style.movie_otherMenu}>
-          <div className={style.wish_btn}>
+          <button type="button" className={style.wish_btn}>
             <img src={wishIcon} alt='wishIcon' />
-          </div>
-          <div className={style.share_btn}>
+          </button>
+          <button type="button" className={style.share_btn}>
             <img src={shareIcon} alt='shareIcon' />
-          </div>
-          <div className={style.support_btn}>
+          </button>
+          <button type="button" className={style.support_btn}>
             <img src={supportIcon} alt='supportIcon' />
             <span>창작자에게 후원하기</span>
-          </div>
+          </button>
         </div>
       </div>
       <div className={style.qna_photo_tabMenu}>

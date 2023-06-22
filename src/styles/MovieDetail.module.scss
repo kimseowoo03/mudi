@@ -1,374 +1,401 @@
-.container {
+.movieDetail_container {
   margin: 2rem;
-}
-.bgImg,
-.top_menu {
-  display: none;
-}
-.movie_contents {
-  display: grid;
-  grid-template-columns: 1fr 20.938rem;
-  grid-template-rows: 1fr;
-  gap: 1.063rem;
-  margin-bottom: 2rem;
-}
-.movie_content {
-  width: 100%;
-  height: 27.188rem;
-  background: red;
-  position: relative;
-  border-radius: 0.625rem;
-}
-.play_btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 4.375rem;
-  height: 4.375rem;
-  background: #fff;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-}
-.play_btn button {
-  background-color: transparent;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-color: transparent transparent transparent #456444;
-  border-style: solid solid solid solid;
-  border-width: 0.625rem 0 0.625rem 1.25rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-.movie_poster_content {
-  width: 100%;
-  height: 27.188rem;
-  background: blue;
-  border-radius: 0.625rem;
-}
-.movieInfo_otherMenu {
-  display: grid;
-  grid-template-columns: 1fr 20.938rem;
-  grid-template-rows: 1fr;
-  gap: 1.063rem;
-}
-.movie_basicInfo {
-  margin-top: 0.625rem;
+  overflow: hidden;
 
-  ul {
-    li {
-      display: inline-block;
-      padding: 0 0.625rem;
-      color: rgba(255, 255, 255, 0.5);
-      border-right: 1px solid rgba(255, 255, 255, 0.5);
+  .top_menu {
+    display: none;
+  }
 
-      &:first-child {
-        padding-left: 0;
-      }
-      &:last-child {
-        border-right: 0;
+  .movie_contents {
+    display: grid;
+    grid-template-columns: 48.438rem max-content;
+    grid-template-rows: 1fr;
+    gap: 1.063rem;
+    margin-bottom: 1.25rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      height: 0.625rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #1c1c1c;
+      border-radius: 0.625rem;
+    }
+
+    .movie_content {
+      width: 100%;
+      height: 27.188rem;
+    }
+
+    .stillCut_content {
+      width: 100%;
+      height: 27.188rem;
+    
+      ul {
+        display: flex;
+        gap: 1.25rem;
+        height: inherit;
+
+        li {
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.625rem;
+          }
+        }
       }
     }
   }
-}
-.movie_hashtag {
-  margin-top: 0.625rem;
 
-  ul {
-    li {
-      display: inline-block;
-      padding: 0.5rem 0.875rem;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      background: #1c1c1c;
-      border-radius: 1.25rem;
-      margin-right: 0.625rem;
+  .movieInfo_otherMenu {
+    display: grid;
+    grid-template-columns: 1fr 20.938rem;
+    grid-template-rows: 1fr;
+    gap: 1.063rem;
 
-      &:first-child {
+    .movie_Info {
+
+      .movie_basicInfo {
+        margin-top: 0.625rem;
+      
+        ul {
+          li {
+            display: inline-block;
+            padding: 0 0.625rem;
+            color: rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+      
+            &:first-child {
+              padding-left: 0;
+            }
+            &:last-child {
+              border-right: 0;
+            }
+          }
+        }
+      }
+
+      .movie_hashtag {
+        margin-top: 0.625rem;
+      
+        ul {
+          li {
+            display: inline-block;
+            padding: 0.5rem 0.875rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: #1c1c1c;
+            border-radius: 1.25rem;
+            margin-right: 0.625rem;
+      
+            &:first-child {
+              background: #456444;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      .director_acting {
+        margin-top: 0.625rem;
+      
+        p {
+          color: rgba(255, 255, 255, 0.5);
+      
+          &:last-child {
+            margin-top: 0.625rem;
+          }
+        }
+      }
+
+      .movie_summary {
+        margin-top: 1.25rem;
+      
+        h2 {
+          font-size: 1.125rem;
+        }
+      
+        p {
+          margin-top: 0.625rem;
+          color: rgba(255, 255, 255, 0.5);
+          line-height: 1.59;
+          font-size: 1.063rem;
+        }
+        .moreView_btn {
+          display: none;
+        }
+      }
+    }
+
+    .movie_otherMenu {
+      display: grid;
+      grid-template-columns: 4.063rem 4.063rem 1fr;
+      gap: 0.625rem;
+      height: 4.063rem;
+    
+      button {
+        border-radius: 0.625rem;
+        border: none;
+        cursor: pointer;
+      }
+      .wish_btn,
+      .share_btn {
+        background: #1c1c1c;
+      }
+      .support_btn {
         background: #456444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+    
+        span {
+          font-size: 0.875rem;
+        }
       }
-      &:last-child {
-        margin-right: 0;
-      }
     }
   }
-}
-.director_acting {
-  margin-top: 0.625rem;
 
-  p {
-    color: rgba(255, 255, 255, 0.5);
-
-    &:last-child {
-      margin-top: 0.625rem;
-    }
-  }
-}
-.movie_summary {
-  margin-top: 1.25rem;
-
-  p {
-    margin-top: 0.625rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  .movie_summary_more_btn {
-    display: none;
-  }
-}
-.movie_otherMenu {
-  display: grid;
-  grid-template-columns: 4.063rem 4.063rem 1fr;
-  gap: 0.625rem;
-  height: 4.063rem;
-
-  div {
-    border-radius: 0.625rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .wish_btn {
-    background: #1c1c1c;
-  }
-  .share_btn {
-    background: #1c1c1c;
-  }
-  .support_btn {
-    gap: 0.625rem;
-    background: #456444;
-
-    span {
-      font-size: 0.875rem;
-    }
-  }
-}
-.qna_photo_tabMenu {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-top: 1.875rem;
-
-  input[type=radio] {
-    display: none;
-
-    &:checked + label {
-      color: #fff;
-      border-top: 2px solid #fff;
-    }
-  }
-  label {
-    width: 50%;
-    text-align: center;
-    margin: 0 auto;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.5);
-    border-top: 2px solid rgba(255, 255, 255, 0.5);
-    padding: 2.188rem 0;
-  }
-  .tab_content {
+  .qna_photo_tabMenu {
     width: 100%;
-    height: 31.25rem;
-    display: none;
-  }
-  .tab1:checked ~ .qna,
-  .tab2:checked ~ .photo {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 1.875rem;
+  
+    input[type=radio] {
+      display: none;
+  
+      &:checked + label {
+        color: #fff;
+        border-top: 2px solid #fff;
+      }
+    }
+    label {
+      width: 50%;
+      text-align: center;
+      margin: 0 auto;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.5);
+      border-top: 2px solid rgba(255, 255, 255, 0.5);
+      padding: 2.188rem 0;
+    }
+    .tab_content {
+      width: 100%;
+      height: 31.25rem;
+      display: none;
+    }
+    .tab1:checked ~ .qna,
+    .tab2:checked ~ .photo {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
 @media (max-width: 67.5rem) {
-  .movie_contents {
-    grid-template-columns: 1fr 16.875rem;
-  }
+  .movieDetail_container {
+    .movie_contents {
+      grid-template-columns: 39.375rem max-content;
 
-  .movie_content {
-    height: 22.063rem;
+      .movie_content {
+        height: 22.188rem;
+      }
 
-    .play_btn {
-      width: 3.438rem;
-      height: 3.438rem;
-  
-      button {
-        width: 0.75rem;
-        height: 1.063rem;
-        border-width: 0.625rem 0 0.625rem 1.063rem;
+      .stillCut_content {
+        height: 22.188rem;
+    
+        ul {
+          height: inherit;
+        }
       }
     }
-  }
-  .movie_poster_content {
-    height: 22.063rem;
-  }
-  .movieInfo_otherMenu {
-    grid-template-columns: 1fr 16.875rem;
-  }
-  .movie_otherMenu {
-    grid-template-columns: 3.125rem 3.125rem 1fr;
-    height: 3.125rem;
 
-    .support_btn {
-      span {
-        font-size: 0.625rem; 
+    .movieInfo_otherMenu {
+      grid-template-columns: 1fr 16.875rem;
+
+      .movie_Info {
+
+        .movie_basicInfo ul li,
+        .movie_hashtag ul li,
+        .director_acting p {
+          font-size: 0.875rem;
+        }
+
+        .movie_summary {
+          p {
+            font-size: 0.875rem;
+            line-height: 1.71;
+          }
+        }
+      }
+
+      .movie_otherMenu {
+        grid-template-columns: 3.125rem 3.125rem 1fr;
+        height: 3.125rem;
+    
+        .support_btn {
+          span {
+            font-size: 0.625rem; 
+          }
+        }
       }
     }
-  }
-  .movie_basicInfo ul li,
-  .movie_hashtag ul li,
-  .director_acting p,
-  .movie_summary p {
-    font-size: 0.875rem;
-  }
-  label {
-    padding: 0.938rem 0;
-    font-size: 1.25rem;
+
+    .qna_photo_tabMenu {
+      label {
+        padding: 0.938rem 0;
+        font-size: 1.25rem;
+      }
+    }
   }
 }
 
 @media (max-width: 50rem) {
-  .movie_contents {
-    display: block;
-  }
-  .movie_poster_content {
-    display: none;
-  }
-  .movieInfo_otherMenu {
-    display: block;
-  }
-  .movie_otherMenu {
-    margin-top: 1.875rem;
-    grid-template-columns: 1fr 1fr 2.3fr;
-    height: 4.688rem;
-    gap: 0.313rem;
+  .movieDetail_container {
 
-    .support_btn {
-      span {
-        font-size: 0.875rem; 
+    .movie_contents {
+      display: block;
+      margin-bottom: 0.625rem;
+      overflow-x: visible;
+
+      .stillCut_content {
+        display: none;
+      }
+    }
+
+    .movieInfo_otherMenu {
+      display: block;
+
+      .movie_otherMenu {
+        margin-top: 1.875rem;
+        grid-template-columns: 1fr 1fr 2.3fr;
+        height: 4.688rem;
+        gap: 0.313rem;
+    
+        .support_btn {
+          span {
+            font-size: 0.875rem; 
+          }
+        }
       }
     }
   }
 }
 
 @media (max-width: 43.75rem) {
-  .container {
+  .movieDetail_container {
     margin: 0;
     position: relative;
-  }
-  .bgImg {
-    display: block;
-    width: 100%;
-    height: 19.375rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: blur(1.875rem);
-    }
-  }
-  .top_menu {
-    height: 3.125rem;
-    background: transparent;
-    display: block;
-    margin: 0 1rem;
-
-    img {
-      width: 3.75rem;
-      height: 1.875rem;
-      margin-top: 0.625rem;
-    }
-  }
-  .movie_contents {
-    display: block;
-
-    .movie_content {
-      border-radius: 0.625rem;
-      width: 12.5rem;
-      height: 16.25rem;
-      background: dodgerblue;
-      margin: 0 auto;
-    }
-    .movie_poster_content {
-      display: none;
-    }
-  }
-  .play_btn {
-    width: 2.5rem;
-    height: 2.5rem;
-
-    button {
-      width: 0.5rem;
-      height: 0.75rem;
-      border-width: 0.5rem 0 0.5rem 0.75rem;
-    }
-  }
-  .movieInfo_otherMenu {
-    display: block;
-    margin: 0 1rem;
-  }
-  .movie_hashtag ul li {
-    margin-right: 0.313rem;
-  }
-  .movie_summary {
-    p {
-      line-height: 1.5rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: normal;
-      word-wrap: break-word;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
-
-      &:has(+ .movie_summary_more_btn:checked) {
-        -webkit-line-clamp: unset;
-      }
-    }
-    .movie_summary_more_btn {
+    .top_menu {
+      height: 3.125rem;
+      background: transparent;
       display: block;
-      appearance: none;
-      cursor: pointer;
-      margin-top: 0.625rem;
-
-      &::before {
-        content: "더보기";
+      margin: 0 1rem;
+  
+      img {
+        width: 3.75rem;
+        height: 1.875rem;
+        margin-top: 0.625rem;
+        cursor: pointer;
       }
-      &:checked:before {
-        content: "닫기";
+    }
+
+    .movie_contents {
+      margin: 0 1rem;
+      margin-bottom: 0.625rem;
+    }
+
+    .movieInfo_otherMenu {
+      display: block;
+      margin: 0 1rem;
+
+      .movie_Info {
+        .movie_hashtag {
+          ul {
+            li {
+              margin-right: 0.313rem;
+            }
+          }
+        }
+        .movie_summary {
+          p {
+            line-height: 1.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            word-wrap: break-word;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+      
+            &:has(+ .moreView_btn:checked) {
+              -webkit-line-clamp: unset;
+            }
+          }
+          .moreView_btn {
+            display: block;
+            appearance: none;
+            cursor: pointer;
+            margin-top: 0.625rem;
+      
+            &::before {
+              content: "더보기";
+            }
+            &:checked:before {
+              content: "닫기";
+            }
+          }
+        }
+      }
+
+      .movie_otherMenu {
+        margin-top: 1.875rem;
+        grid-template-columns: 4.688rem 4.688rem 1fr;
+        height: 4.688rem;
+        gap: 0.313rem;
+      }
+    }
+
+    .qna_photo_tabMenu {
+      margin-top: 2.5rem;
+
+      label {
+        font-size: 1.125rem;
+      }
+  
+      .tab_content {
+        height: 12.5rem;
+        margin: 0 1rem;
       }
     }
   }
-  .movie_otherMenu {
-    margin-top: 1.875rem;
-    grid-template-columns: 4.688rem 4.688rem 1fr;
-    height: 4.688rem;
-    gap: 0.313rem;
-  }
-  label {
-    font-size: 1.125rem;
-  }
-  .qna_photo_tabMenu {
-    margin-top: 2.5rem;
+}
 
-    .tab_content {
-      height: 12.5rem;
-      margin: 0 1rem;
+@media (max-width: 24.375rem) {
+  .movieDetail_container {
+    .movie_contents {
+      .movie_content {
+        height: 12.5rem;
+      }
     }
   }
 }
 
 @media (max-width: 23.438rem) {
-  .movie_otherMenu {
-    .support_btn {
-      span {
-        font-size: 0.75rem;
+  .movieDetail_container {
+    .movieInfo_otherMenu {
+      .movie_otherMenu {
+        .support_btn {
+          span {
+            font-size: 0.75rem;
+          }
+        }
       }
     }
   }
