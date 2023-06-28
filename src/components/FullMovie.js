@@ -26,9 +26,9 @@ const FullMovie = () => {
 },[]);
 
   return (
-    <div className={style.container}>
+    <div className={style.fullMovie_container}>
       <h2>전체영화</h2>
-      <div className={style.full_movie_contents}>
+      <div className={style.fullMovie_contents}>
         {moviesData.map((movie, index) => {
           return <MovieItem key={index} movie={movie} poster={movie_poster} />;
         })}

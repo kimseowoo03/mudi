@@ -24,16 +24,14 @@ const Aspoiler = () => {
   }, []);
 
   return (
-    <div className={style.container}>
+    <div className={style.spo_container}>
       <h2>스포한장</h2>
-      <div className={style.spoiler_contents}>
+      <div className={style.spo_contents}>
         {moviesData.map((movie) => {
           return (
-            <div key={movie.id} className={style.spoiler_content}>
+            <div key={movie.id} className={style.item}>
               <Link to={movie.id}>
-                <div className={style.gradientImg}>
-                  <img src={movie_spoiler} alt="movie_spoiler_image" />
-                </div>
+                <img src={movie_spoiler} alt="movie_spoiler_image" />
               </Link>
             </div>
           );

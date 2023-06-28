@@ -102,6 +102,7 @@ const UserRegister = () => {
             확인
           </button>
         </form>
+        <p>이미 계정이 있다면? <span>로그인</span>하기</p>
       </div>
     </div>
   );

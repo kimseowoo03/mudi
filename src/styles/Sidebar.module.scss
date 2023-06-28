@@ -1,5 +1,4 @@
 .container {
-  position: fixed;
   width: 15.625rem;
   position: sticky;
   top: 0;
@@ -62,23 +61,24 @@
   bottom: 0;
   width: 100%;
   height: 4.375rem;
-}
 
-.profile_detail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4.375rem;
-
-  img {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-  }
-  p {
-    margin-left: 0.625rem;
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.6);
+  .profile_detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.375rem;
+  
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+    }
+    p {
+      margin-left: 0.625rem;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+    }
   }
 }
 
@@ -160,6 +160,7 @@
       height: 1.875rem;
       margin-left: 1rem;
       margin-top: 0.938rem;
+      cursor: pointer;
     }
   }
 

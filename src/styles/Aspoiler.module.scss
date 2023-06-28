@@ -1,104 +1,73 @@
 $main-radius: 0.625rem;
 
-.container {
+.spo_container {
   margin-left: 2rem;
-}
 
-.spoiler_contents {
-  margin: 1.25rem 0;
-  display: flex;
-  gap: 1.25rem;
-  overflow-x: scroll;
-  white-space: nowrap;
-
-  &::-webkit-scrollbar {
-    background-color: transparent;
-    height: 0.625rem;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #1c1c1c;
-    border-radius: $main-radius;
-  }
-}
-
-.spoiler_content {
-  position: relative;
-  flex: 0 0 22.5rem;
-
-  &:last-child {
-    margin-right: 2rem;
-  }
-
-  .gradientImg {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 72%, #000 100%);
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 13.75rem;
-    border-radius: $main-radius;
-
-    img {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
+  .spo_contents {
+    margin: 1.25rem 0;
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: scroll;
+    white-space: nowrap;
+  
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      height: 0.625rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #1c1c1c;
       border-radius: $main-radius;
     }
-  }
-  .spoiler_text {
-    position: absolute;
-    left: 0.938rem;
-    bottom: 1.25rem;
-    
-    p {
-      font-family: Cafe24Oneprettynight;
 
-      &:first-child {
-        font-size: 1rem;
-      }
+    .item {
+      flex: 0 0 22.5rem;
+    
       &:last-child {
-        font-size: 0.875rem;
-        margin-top: 0.313rem;
+        margin-right: 2rem;
+      }
+    
+      img {
+        width: 100%;
+        height: 13.75rem;
+        border-radius: $main-radius;
       }
     }
   }
 }
 
 @media (max-width: 67.5rem) {
-  .gradientImg {
-    height: 15.313rem;
+  .spo_container {
+    .spo_contents {
+      .item {
+        img {
+          height: 15.313rem;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 43.75rem) {
-  .container {
+  .spo_container {
     margin-left: 1rem;
-  }
 
-  .spoiler_contents::-webkit-scrollbar {
-    display: none;
-  }
+    .spo_contents {
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
-  .spoiler_content {
-    max-width: 20rem;
-
-    &:last-child {
-      margin-right: 1rem;
-    }
-  
-    .gradientImg {
-      width: 20rem;
-      height: 11.25rem;
-    }
-  }
-  
-  .spoiler_text {
-
-    p:last-child {
-      font-size: 0.5rem;
-      margin-top: 0.063rem;
+      .item {
+        max-width: 20rem;
+    
+        &:last-child {
+          margin-right: 1rem;
+        }
+      
+        img {
+          width: 20rem;
+          height: 11.25rem;
+        }
+      }
     }
   }
 }

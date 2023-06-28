@@ -1,6 +1,6 @@
 $main-radius: 0.625rem;
 
-.hashtag {
+.hashtag_container {
   margin-left: 2rem;
   
   .hashtagSelect {
@@ -46,53 +46,79 @@ $main-radius: 0.625rem;
       }
     }
   }
-}
 
-.full_movie_contents {
-  margin: 1.25rem 0;
-  display: flex;
-  gap: 1.25rem;
-  overflow-x: scroll;
-  white-space: nowrap;
-
-  &::-webkit-scrollbar {
-    background-color: transparent;
-    height: 0.625rem;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #1c1c1c;
-    border-radius: $main-radius;
-  }
-}
-
-@media (min-width:43.813rem) and (max-width:46.688rem) {
-  .hashtag {
-    .hashtagSelect {
-      gap: 0.188rem;
+  .movie_contents {
+    margin: 1.25rem 0;
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: scroll;
+    white-space: nowrap;
+  
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      height: 0.625rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #1c1c1c;
+      border-radius: $main-radius;
+    }
+  
+    .no_movie {
+      width: 100%;
+      height: 17.188rem;
+      background: #1b1b1b;
+      margin-right: 2rem;
+      border-radius: $main-radius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      p {
+        margin-top: 1.25rem;
+        font-size: 1rem;
+      }
     }
   }
 }
 
 @media (max-width: 43.75rem) {
-  .hashtag {
+  .hashtag_container {
     margin-left: 1rem;
 
     .hashtagSelect {
-
       &::-webkit-scrollbar {
         display: none;
       }
 
       .hashtagItem {
-        font-size: 0.75rem;
+        &:last-child {
+          margin-right: 1rem;
+        }
+      }
 
+      .hashtagItem-clicked {
         &:last-child {
           margin-right: 1rem;
         }
       }
     }
-  }
-  .full_movie_contents::-webkit-scrollbar {
-    display: none;
+
+    .movie_contents {
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .no_movie {
+        height: 11.25rem;
+        margin-right: 1rem;
+  
+        img {
+          width: 6.25rem;
+          height: 5rem;
+        }
+      }
+    }
   }
 }
