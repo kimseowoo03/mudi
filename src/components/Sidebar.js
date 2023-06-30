@@ -81,7 +81,7 @@ const Sidebar = () => {
           <div className={style.profile_detail}>
             <img src={user_profile} alt="user_profile_image" />
             <p>
-              <span>로그인</span>을 해주세요
+              <Link to="/login">로그인</Link>을 해주세요
             </p>
           </div>
         </div>

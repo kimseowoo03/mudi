@@ -5,6 +5,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import style from "../styles/UserLogin.module.scss";
 import backArrowIcon from "../assets/icon-backArrow.svg";
 import whiteLogo from "../assets/logo_white.svg";
+import { Link } from "react-router-dom";
 
 const UserLogin = () => {
   const emailRef = useRef();
@@ -40,22 +41,41 @@ const UserLogin = () => {
         <div className={style.logo}>
           <img src={whiteLogo} alt="logo" />
         </div>
-        <p><strong>인디 무비</strong>보러 <strong>무디</strong>로<br />가는거 어떤디?</p>
+        <p>
+          <strong>인디 무비</strong>보러 <strong>무디</strong>로<br />
+          가는거 어떤디?
+        </p>
         <form onSubmit={submitHandler} autoComplete="off">
           <div className={`${style.email_input} ${style.item}`}>
             <label htmlFor="userEmail">이메일</label>
-            <input type="email" id="userEmail" placeholder="이메일을 입력하세요" ref={emailRef} />
+            <input
+              type="email"
+              id="userEmail"
+              placeholder="이메일을 입력하세요"
+              ref={emailRef}
+            />
           </div>
           <div className={`${style.pw_input} ${style.item}`}>
             <label htmlFor="userPw">비밀번호</label>
-            <input type="password" id="userPw" placeholder="비밀번호를 입력하세요" ref={passwordRef} />
+            <input
+              type="password"
+              id="userPw"
+              placeholder="비밀번호를 입력하세요"
+              ref={passwordRef}
+              autoComplete="off"
+            />
           </div>
           <label htmlFor="keepLogin">
-            <input type="checkbox" id="keepLogin" />로그인 상태 유지
+            <input type="checkbox" id="keepLogin" />
+            로그인 상태 유지
           </label>
           <button type="submit">로그인</button>
         </form>
-        <button type="button" className={style.signUpBtn}>회원가입</button>
+        <Link to="/register">
+          <button type="button" className={style.signUpBtn}>
+            회원가입
+          </button>
+        </Link>
       </div>
     </div>
   );
