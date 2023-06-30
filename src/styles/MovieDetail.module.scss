@@ -12,7 +12,6 @@
     grid-template-rows: 1fr;
     gap: 1.063rem;
     margin-bottom: 1.25rem;
-    overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
   
@@ -26,12 +25,10 @@
     }
 
     .movie_content {
-      width: 100%;
       height: 27.188rem;
     }
 
     .stillCut_content {
-      width: 100%;
       height: 27.188rem;
     
       ul {
