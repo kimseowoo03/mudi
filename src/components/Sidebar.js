@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useStore from "../store/useStore";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 import NavItem from "./NavItem";
 
@@ -18,30 +20,38 @@ const NavItemsData = [
     src: home_icon,
     alt: "home_icon",
     nav_name: "홈",
-    link_to: "/"
+    link_to: "/",
   },
   {
     src: magazine_icon,
     alt: "magazine_icon",
     nav_name: "매거진",
-    link_to: false
+    link_to: false,
   },
   {
     src: cinema_icon,
     alt: "cinema_icon",
     nav_name: "상영회",
-    link_to: false
+    link_to: false,
   },
   {
     src: wishlist_icon,
     alt: "home_icon",
     nav_name: "위시리스트",
-    link_to: false
+    link_to: false,
   },
 ];
 
 const Sidebar = () => {
-  const {sidebarActive, setSidebarActive} = useStore();
+  const { width } = useWindowSize();
+  const { sidebarActive, setSidebarActive } = useStore();
+
+  useEffect(() => {
+    if (sidebarActive && width <= 700) {
+      console.log("700");
+      setSidebarActive();
+    }
+  }, [width]);
 
   const sidebarClass = sidebarActive ? style.containerActive : style.container;
 
@@ -49,7 +59,13 @@ const Sidebar = () => {
     <div className={sidebarClass}>
       <div className={style.sidebar}>
         <div className={style.close_btn}>
-          <img src={close_icon} alt="close_icon" onClick={() => {setSidebarActive()}} />
+          <img
+            src={close_icon}
+            alt="close_icon"
+            onClick={() => {
+              setSidebarActive();
+            }}
+          />
         </div>
         <div className={style.logo}>
           <Link to="/">
@@ -64,7 +80,9 @@ const Sidebar = () => {
         <div className={style.profile}>
           <div className={style.profile_detail}>
             <img src={user_profile} alt="user_profile_image" />
-            <p><span>로그인</span>을 해주세요</p>
+            <p>
+              <span>로그인</span>을 해주세요
+            </p>
           </div>
         </div>
       </div>
