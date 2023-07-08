@@ -1,8 +1,7 @@
 import style from "../styles/Banner.module.scss";
 
-import bannerImg01 from '../assets/banner01.png';
-import bannerImg02 from '../assets/banner02.png';
-import bannerImg03 from '../assets/banner03.png';
+import bannerImg01 from '../assets/camellia-banner.jpg';
+import bannerImg02 from '../assets/windnoise-banner.jpg';
 
 const Banner = () => {
   return (
@@ -16,10 +15,6 @@ const Banner = () => {
             </li>
             <li id="slide02" className={style.slide}>
               <img src={bannerImg02} alt="bannerImage02" />
-              <div className={style.snapper}></div>
-            </li>
-            <li id="slide03" className={style.slide}>
-              <img src={bannerImg03} alt="bannerImage03" />
               <div className={style.snapper}></div>
             </li>
           </ul> 
