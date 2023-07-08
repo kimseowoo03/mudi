@@ -1,7 +1,20 @@
 $main-radius: 0.625rem;
+$primary-color: #456444;
+$primary-margin: 2rem;
+$secondary-margin: 1rem;
+
+@mixin hashtagItem($bg-color) {
+  flex: 0 0 auto;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1.25rem;
+  background: $bg-color;
+}
 
 .hashtag_container {
-  margin-left: 2rem;
+  margin-left: $primary-margin;
   
   .hashtagSelect {
     margin-top: 0.625rem;
@@ -19,30 +32,18 @@ $main-radius: 0.625rem;
     }
   
     .hashtagItem {
-      flex: 0 0 auto;
-      cursor: pointer;
-      font-size: 1rem;
-      padding: 0.5rem 0.875rem;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 1.25rem;
-      background: #1c1c1c;
+      @include hashtagItem(#1c1c1c);
 
       &:last-child {
-        margin-right: 2rem;
+        margin-right: $primary-margin;
       }
     }
 
     .hashtagItem-clicked {
-      flex: 0 0 auto;
-      cursor: pointer;
-      font-size: 1rem;
-      padding: 0.5rem 0.875rem;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 1.25rem;
-      background: #456444;
+      @include hashtagItem($primary-color);
 
       &:last-child {
-        margin-right: 2rem;
+        margin-right: $primary-margin;
       }
     }
   }
@@ -67,7 +68,7 @@ $main-radius: 0.625rem;
       width: 100%;
       height: 17.188rem;
       background: #1b1b1b;
-      margin-right: 2rem;
+      margin-right: $primary-margin;
       border-radius: $main-radius;
       display: flex;
       justify-content: center;
@@ -84,7 +85,7 @@ $main-radius: 0.625rem;
 
 @media (max-width: 43.75rem) {
   .hashtag_container {
-    margin-left: 1rem;
+    margin-left: $secondary-margin;
 
     .hashtagSelect {
       &::-webkit-scrollbar {
@@ -93,13 +94,13 @@ $main-radius: 0.625rem;
 
       .hashtagItem {
         &:last-child {
-          margin-right: 1rem;
+          margin-right: $secondary-margin;
         }
       }
 
       .hashtagItem-clicked {
         &:last-child {
-          margin-right: 1rem;
+          margin-right: $secondary-margin;
         }
       }
     }
@@ -112,7 +113,7 @@ $main-radius: 0.625rem;
 
       .no_movie {
         height: 11.25rem;
-        margin-right: 1rem;
+        margin-right: $secondary-margin;
   
         img {
           width: 6.25rem;

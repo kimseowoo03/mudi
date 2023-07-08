@@ -1,5 +1,9 @@
+$main-radius: 0.625rem;
+$primary-margin: 2rem;
+$secondary-margin: 1rem;
+
 .fullMovie_container {
-  margin-left: 2rem;
+  margin-left: $primary-margin;
 
   .fullMovie_contents {
     margin: 1.25rem 0;
@@ -14,14 +18,14 @@
     }
     &::-webkit-scrollbar-thumb {
       background-color: #1c1c1c;
-      border-radius: 0.625rem;
+      border-radius: $main-radius;
     }
   }
 }
 
 @media (max-width: 43.75rem) {
   .fullMovie_container {
-    margin-left: 1rem;
+    margin-left: $secondary-margin;
 
     .fullMovie_contents {
       &::-webkit-scrollbar {

@@ -51,6 +51,7 @@ const UserRegister = () => {
               type="radio"
               name="membership"
               value="시청자"
+              defaultChecked={true}
               onChange={() => {
                 setProducer("시청자");
               }}

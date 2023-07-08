@@ -1,3 +1,8 @@
+$main-radius: 0.625rem;
+$primary-color: #456444;
+$primary-margin: 2rem;
+$secondary-margin: 1rem;
+
 .container {
   width: 15.625rem;
   position: sticky;
@@ -32,13 +37,13 @@
     text-align: center;
     line-height: 3.75rem;
     margin: 0.625rem 0.938rem;
+    border-radius: $main-radius;
 
     &:first-child {
       margin-top: 0;
     }
     &:hover {
-      border-radius: 0.625rem;
-      background-color: #456444;
+      background-color: $primary-color;
       transition: all 0.3s;
     }
   }
@@ -66,18 +71,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4.375rem;
+    height: inherit;
   
-    img {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-    }
-    p {
-      margin-left: 0.625rem;
+    a {
       font-size: 0.875rem;
-      color: rgba(255, 255, 255, 0.6);
-      cursor: pointer;
     }
   }
 }
@@ -116,16 +113,6 @@
       }
     }
   }
-
-  .profile {
-    height: 4.375rem;
-    
-    .profile_detail {
-      p {
-        display: none;
-      }
-    }
-  }
 }
 
 @media (max-width: 43.75rem) {
@@ -153,7 +140,6 @@
     display: block;
     width: 100%;
     height: 3.438rem;
-    background-color: #121212;
 
     img {
       width: 3.75rem;
@@ -193,15 +179,5 @@
 
   .profile {
     position: static;
-    margin: 0 1rem;
-
-    .profile_detail {
-      justify-content: flex-start;
-      padding-left: 1.438rem;
-      
-      p {
-        display: block;
-      }
-    }
   }
 }

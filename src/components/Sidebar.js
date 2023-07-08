@@ -13,7 +13,6 @@ import magazine_icon from "../assets/icon-Magazine.svg";
 import cinema_icon from "../assets/icon-cinema.svg";
 import wishlist_icon from "../assets/icon-wishlist.svg";
 import close_icon from "../assets/icon-x.svg";
-import user_profile from "../assets/user_profile.png";
 
 const NavItemsData = [
   {
@@ -69,7 +68,7 @@ const Sidebar = () => {
         </div>
         <div className={style.logo}>
           <Link to="/">
-            <img src={logo} alt="mudi_logo" />
+            <img src={logo} alt="무디 로고 이미지" />
           </Link>
         </div>
         <ul className={style.nav}>
@@ -79,10 +78,7 @@ const Sidebar = () => {
         </ul>
         <div className={style.profile}>
           <div className={style.profile_detail}>
-            <img src={user_profile} alt="user_profile_image" />
-            <p>
-              <Link to="/login">로그인</Link>을 해주세요
-            </p>
+            <Link to="/login">로그인</Link>
           </div>
         </div>
       </div>
