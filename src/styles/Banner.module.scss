@@ -2,10 +2,12 @@ $main-radius: 0.625rem;
 
 .banner_container {
   margin: 2rem;
-  display: grid;
+  display: block;
+  /* right-content 임시 삭제때문에 주석 처리
   grid-template-columns: 1fr 15.625rem;
   grid-template-rows: 1fr;
   grid-gap: 1.313rem;
+  */
 
   .left_contents {
 
@@ -55,6 +57,8 @@ $main-radius: 0.625rem;
   }
 
   .right_contents {
+    display: none;
+
     .support {
       height: 5.313rem;
       background:  #d9d9d9;
@@ -120,10 +124,10 @@ $main-radius: 0.625rem;
     left: 0;
   }
   95% {
-    left: -200%;
+    left: -100%;
   }
   98% {
-    left: -300%;
+    left: -100%;
   }
   99% {
     left: 0;
@@ -148,7 +152,7 @@ $main-radius: 0.625rem;
 @media (hover: hover) {
   .snapper {
     animation-name: tonext, snap;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in-out;
     animation-duration: 5s;
     animation-iteration-count: infinite;
   }

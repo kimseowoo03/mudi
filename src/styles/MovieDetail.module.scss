@@ -1,5 +1,10 @@
+$main-radius: 0.625rem;
+$primary-color: #456444;
+$primary-margin: 2rem;
+$secondary-margin: 1rem;
+
 .movieDetail_container {
-  margin: 2rem;
+  margin: $primary-margin;
   overflow: hidden;
 
   .top_menu {
